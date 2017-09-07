@@ -259,9 +259,9 @@ void Dialog::on_sndPosiBtn_clicked()     //对坐标指令进行处理
 {/*  实现方法一（空间任意抓取）：尚未调试完成
     int flag = 1;
     QByteArray sndop;
-    qreal l1 = 10.5;
-    qreal l2 = 6.0;
-    qreal l3 = 16.5;
+    qreal l1 = 10.5;  //1号臂长
+    qreal l2 = 6.0;   //2号臂长
+    qreal l3 = 16.5;    //3号臂长
     qreal Px = ui->PositionX->text().toDouble();
     qreal Py = ui->PositionY->text().toDouble();
     qreal Pz = ui->positionZ->text().toDouble();
@@ -326,7 +326,7 @@ void Dialog::on_sndPosiBtn_clicked()     //对坐标指令进行处理
 
 
 
-//实现方法二：已调试完成
+//实现方法二：已调试完成   量化一条直线，然后扫描整个平面，若要对空间抓取需要量化一个平面
     QByteArray sndop;
     qreal Px = ui->PositionX->text().toDouble();
     qreal Py = ui->PositionY->text().toDouble();
